@@ -1,31 +1,31 @@
 import requests
 import streamlit as st
 from streamlit_lottie import st_lottie
-from streamlit_option_menu import option_menu
-from PIL import Image
+#from streamlit_option_menu import option_menu
+#from PIL import Image
 
 # Find more emojis here: https://www.webfx.com/tools/emojis-cheat-sheet/
 st.set_page_config(page_title="BrownFur", page_icon=":tada:", layout="wide")
 
 # SIDEBAR
-with st.sidebar:
-    selected = option_menu(
-        menu_title=None, #required
-        options=["Home","About", "Contact"], #required
-    )
+#with st.sidebar:
+ #   selected = option_menu(
+ #       menu_title=None, #required
+  #      options=["Home","About", "Contact"], #required
+   # )
 
-    img = Image.open("image/sam.jpg")
+ #   img = Image.open("image/sam.jpg")
 
-if selected == "About":
-    st.title("About")
-    st.image(img)
-    st.write("##")
-    st.subheader("hi my name is sam, i'm a teenager from ghana and i'm looking for a job as a hacker. if you have any jobs for me feel free to contact me")
-if selected == "Contact":
-    st.write("You can contact me by telegram or follow me on X")
-    st.write("##")
-    st.markdown("[telegram](t.me/Susuyg)")
-    st.markdown("[X](https://x.com/sambrown1000)")
+#if selected == "About":
+    #st.title("About")
+   # st.image(img)
+  #  st.write("##")
+ #   st.subheader("hi my name is sam, i'm a teenager from ghana and i'm looking for a job as a hacker. if you have any jobs for me feel free to contact me")
+#if selected == "Contact":
+    #st.write("You can contact me by telegram or follow me on X")
+    #st.write("##")
+    #st.markdown("[telegram](t.me/Susuyg)")
+    #st.markdown("[X](https://x.com/sambrown1000)")
 def load_lottieurl(url):
     r = requests.get(url)
     if r.status_code != 200:
